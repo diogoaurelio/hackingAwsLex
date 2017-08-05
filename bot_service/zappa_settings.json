@@ -1,0 +1,8 @@
+{
+    "dev": {
+        "app_function": "bot.app",
+        "aws_region": "eu-west-1",
+        "profile_name": "default",
+        "s3_bucket": "hackaton-aug-17"
+    }
+}

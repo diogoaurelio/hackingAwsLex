@@ -1,0 +1,6 @@
+boto3
+botocore
+awscli
+requests
+flask-ask
+zappa

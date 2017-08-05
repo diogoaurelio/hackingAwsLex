@@ -8,25 +8,43 @@
 - Run locally: test API on your local machine before deploying into AWS
 - Deploy in AWS serverless fashion (aka Lambda + Gateway)
 
-### Setup virtual environment
- 
+### Setup 2 virtual environments
+
+We are using 2 virtual environments (to separate dependencies for web dev and backend), one for zappa deployment of web application (AWS lambda plus API Gateway) and another for bot application (AWS Lambda integrating with AWS Lex)
+
+1) Create a virtual environment for the web application:
 Usage:
 
 ```
-cd <this-repo-root-directory>
+cd <this-repo-root-directory>/web_app
 
-virtualenv -p /usr/bin/python3.6 hacking_aws_lex
-source hacking_aws_lex/bin/activate
+virtualenv -p /usr/bin/python3.6 web_app_hacking_aws_lex
+source web_app_hacking_aws_lex/bin/activate
 pip install -r requirements.txt
 ```
 
 This will create a new directory with packages in your current location (no problem if you are inside the repo directory IF you copy paste the commands, as it is gitignored).
- 
-Finally, to deactivate this virtual environment:
 
+We need to create a new virtual env now for the Flask App, so we need to "jump" outside of this virtual env.
+To deactivate a this virtual environment, just do:
 ```
 deactivate
 ```
+Note: this does NOT remove it; just disables it from the current terminal environment. No worries :)
+
+2) Create a virtual environment for the bot application:
+
+```
+cd <this-repo-root-directory>/web_app
+
+virtualenv -p /usr/bin/python3.6 bot_app_hacking_aws_lex
+source bot_app_hacking_aws_lex/bin/activate
+pip install -r requirements.txt
+```
+
+#### To switch between different
+
+
  
  
 Next time you open again a terminal window, you need to load this virtual environtment again - in other words, to activate it again:
@@ -48,6 +66,20 @@ To completely remove this venv:
 rm virtualenv hacking_aws_lex
 ```
 
+
+
+### Django setup
+
+The django app was initially started using [this page](https://edgarroman.github.io/zappa-django-guide/walk_core/)
+You do NOT need to run this command anymore, we just write it for reference:
+```
+cd web_service
+django-admin startproject app .
+```
+
+```
+python manage.py runserver
+```
 
 
 ### Setup Permissions

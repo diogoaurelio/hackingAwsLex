@@ -1,8 +1,12 @@
 # Custom
-secrets/*
-!secrets/__init__.py
-!secrets/secrets_template.py
+web_service/secrets/*
+!web_service/secrets/__init__.py
+!web_service/secrets/secrets_template.py
 hacking_aws_lex
+bot_app_hacking_aws_lex
+web_app_hacking_aws_lex
+db.sqlite3
+
 *.zip
 
 # Created by .ignore support plugin (hsz.mobi)
