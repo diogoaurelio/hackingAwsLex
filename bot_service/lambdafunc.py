@@ -1,3 +1,6 @@
+# this took all afternoon
+
+
 import boto3
 import json
 from datetime import datetime as dt
