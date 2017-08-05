@@ -74,7 +74,7 @@ The django app was initially started using [this page](https://edgarroman.github
 You do NOT need to run this command anymore, we just write it for reference:
 ```
 cd web_service
-django-admin startproject app .
+django-admin startproject lex_app .
 ```
 
 ```
